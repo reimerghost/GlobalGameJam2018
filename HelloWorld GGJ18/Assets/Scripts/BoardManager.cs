@@ -39,23 +39,48 @@ public class BoardManager : MonoBehaviour {
 	}
 
 	void BoardSetup(){
-		boardHolder = new GameObject ("Board").transform;
 
-		for ( int x = -1; x < columns + 1; x++){
-			for (int y = -1; y < rows + 1; y++) {
-				//GameObject toInstantiate = floorTiles [Random.Range (0, floorTiles.Length)];
+        GenerarTablero1();
+        GenerarTablero2();
+	}
+
+    void GenerarTablero2()
+    {
+        
+        boardHolder = new GameObject("Board1").transform;
+
+        for (int x = 0; x < columns + 1; x++)
+        {
+            for (int y = 0; y < rows + 1; y++)
+            {
                 GameObject toInstantiate = floorTiles[0];
 
-                if (x == -1 || x == columns || y == -1 || y == rows) {
-					//toInstantiate = outerWallTiles [Random.Range (0, outerWallTiles.Length)];
-				}
+                GameObject instance = Instantiate(toInstantiate, new Vector3(x+5, y, 0f), Quaternion.identity) as GameObject;
 
-				GameObject instance = Instantiate (toInstantiate, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject;
+                instance.transform.SetParent(boardHolder);
+            }
+        }
 
-				instance.transform.SetParent (boardHolder);
-			}
-		}
-	}
+    }
+
+    void GenerarTablero1()
+    {
+
+        boardHolder = new GameObject("Board2").transform;
+
+        for (int x = 0; x < columns + 1; x++)
+        {
+            for (int y = 0; y < rows + 1; y++)
+            {             
+                GameObject toInstantiate = floorTiles[1];
+
+                GameObject instance = Instantiate(toInstantiate, new Vector3(-x-5, y, 0f), Quaternion.identity) as GameObject;
+
+                instance.transform.SetParent(boardHolder);
+            }
+        }
+
+    }
 
 	Vector3 RandomPosition(){
 		int randomIndex = Random.Range (0, gridPositions.Count);
