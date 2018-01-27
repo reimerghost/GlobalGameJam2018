@@ -28,24 +28,36 @@ public class RumbleCon : MonoBehaviour {
 
 
 		//input keys
+        // UpArrow	    Up arrow key.
+        // DownArrow	Down arrow key.
+        // RightArrow	Right arrow key.
+        // LeftArrow	Left arrow key.
 
-//		if( Input.GetKeyDown( KeyCode.Space ) )
-//			Debug.Log( "Space key was pressed." );
-//
-//		if( Input.GetKeyUp( KeyCode.UpArrow ) )
-//			Debug.Log( "Space key was released." );
-//
-//		if( Input.GetKeyRight( KeyCode.UpArrow ) )
-//			Debug.Log( "Space key was released." );
-//
-//		if( Input.GetKeyLeft( KeyCode.DownArrow ) )
-//			Debug.Log( "Space key was released." );
+		if( Input.GetKeyDown( KeyCode.Space ) ){
+            Debug.Log( "Space key was pressed." );
+                Player2.jump()
+        }
 
-    // if (Input.GetKey ("up"))
-    //     print ("up arrow key is held down");
+		if( Input.GetKeyUp( KeyCode.UpArrow ) ){
+            Debug.Log( "player2 move up" );
+                Player2.move_up()
+        }
 
-    // if (Input.GetKey ("down"))
-    //     print ("down arrow key is held down");
+        if( Input.GetKeyDown( KeyCode.DownArrow ) ){
+            Debug.Log( "player2 move up" );
+                Player2.move_down()
+        }
+
+		if( Input.GetKeyRight( KeyCode.RightArrow ) ){
+            Debug.Log( "player2 move right" );
+                Player2.move_right()
+        }
+
+		if( Input.GetKeyLeft( KeyCode.LeftArrow ) ){
+            Debug.Log( " player 2 move left" );
+                Player2.move_left()
+        }
+
 
         
     }
