@@ -165,7 +165,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.6
+  orthographic size: 4.8
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -188,11 +188,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 164962215}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9, y: 4, z: -10}
+  m_LocalPosition: {x: -9, y: 3.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &286267442
 GameObject:
@@ -246,7 +246,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.6
+  orthographic size: 4.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -269,13 +269,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 286267442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: 4, z: -10}
+  m_LocalPosition: {x: 9, y: 3.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1397030837
+--- !u!1001 &1981077759
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -285,7 +285,12 @@ Prefab:
     - target: {fileID: 114838518814718818, guid: e78e939036194444da0d838adc88a501,
         type: 2}
       propertyPath: floorTiles.Array.size
-      value: 2
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114838518814718818, guid: e78e939036194444da0d838adc88a501,
+        type: 2}
+      propertyPath: outerWallTiles.Array.size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4393873288920940, guid: e78e939036194444da0d838adc88a501, type: 2}
       propertyPath: m_LocalPosition.x
@@ -317,13 +322,55 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4393873288920940, guid: e78e939036194444da0d838adc88a501, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114838518814718818, guid: e78e939036194444da0d838adc88a501,
         type: 2}
-      propertyPath: floorTiles.Array.data[1]
+      propertyPath: floorTiles.Array.data[2]
       value: 
-      objectReference: {fileID: 1397911995462348, guid: cb224bf614edc084baaf227108ac283e,
+      objectReference: {fileID: 1798914847277558, guid: 6d17ce477d1382a47aabb64c8ec78923,
+        type: 2}
+    - target: {fileID: 114838518814718818, guid: e78e939036194444da0d838adc88a501,
+        type: 2}
+      propertyPath: floorTiles.Array.data[3]
+      value: 
+      objectReference: {fileID: 1774698930802364, guid: 5ae4bb1f5442c38449b7fc72bd7b46da,
+        type: 2}
+    - target: {fileID: 114838518814718818, guid: e78e939036194444da0d838adc88a501,
+        type: 2}
+      propertyPath: floorTiles.Array.data[4]
+      value: 
+      objectReference: {fileID: 1149278187424914, guid: fdaf905d07ee6fe45b77aa6d9c233e50,
+        type: 2}
+    - target: {fileID: 114838518814718818, guid: e78e939036194444da0d838adc88a501,
+        type: 2}
+      propertyPath: floorTiles.Array.data[5]
+      value: 
+      objectReference: {fileID: 1766650459358842, guid: e93a8426095336841afc58227dce4d6d,
+        type: 2}
+    - target: {fileID: 114838518814718818, guid: e78e939036194444da0d838adc88a501,
+        type: 2}
+      propertyPath: outerWallTiles.Array.data[2]
+      value: 
+      objectReference: {fileID: 1661120043030356, guid: e26433b2d8c3049438995e50c1f93c85,
+        type: 2}
+    - target: {fileID: 114838518814718818, guid: e78e939036194444da0d838adc88a501,
+        type: 2}
+      propertyPath: outerWallTiles.Array.data[3]
+      value: 
+      objectReference: {fileID: 1485274244002664, guid: f196d89024ff74144af20f97646bbee0,
+        type: 2}
+    - target: {fileID: 114838518814718818, guid: e78e939036194444da0d838adc88a501,
+        type: 2}
+      propertyPath: outerWallTiles.Array.data[4]
+      value: 
+      objectReference: {fileID: 1989046397718414, guid: 1cc40e346d8c9974d979d9db55394124,
+        type: 2}
+    - target: {fileID: 114838518814718818, guid: e78e939036194444da0d838adc88a501,
+        type: 2}
+      propertyPath: outerWallTiles.Array.data[5]
+      value: 
+      objectReference: {fileID: 1646292470759936, guid: 3b8b6ff815075894b92fe21e9a1a1ed0,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e78e939036194444da0d838adc88a501, type: 2}
