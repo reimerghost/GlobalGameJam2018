@@ -20,7 +20,7 @@ public class RumbleCon : MonoBehaviour {
         Debug.Log("H: " + horizontal);
         Debug.Log("V: " + vertical);
 
-        Handheld.Vibrate();
+
 
         if (horizontal != 0)
             vertical = 0;

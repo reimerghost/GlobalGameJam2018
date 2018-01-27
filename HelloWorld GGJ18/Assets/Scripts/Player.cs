@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
 
     private float walkSpeed;
-    private float curSpeed;
+    public float curSpeed;
 
     public bool isTouchingWallRight;
     public bool isTouchingWallLeft;
@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        walkSpeed = (float)5;
+        walkSpeed = (float)4;
         curSpeed = walkSpeed;
 
     }
@@ -30,10 +30,6 @@ public class Player : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-
-
-        //rb.velocity = new Vector2(Mathf.Lerp(0, Input.GetAxis("Horizontal") * curSpeed, 0.8f),
-          //                          Mathf.Lerp(0, Input.GetAxis("Vertical") * curSpeed, 0.8f));
 
 
         Move(moveHorizontal, moveVertical, curSpeed);
@@ -53,7 +49,7 @@ public class Player : MonoBehaviour
                 if (isTouchingWallRight)
                 {
                     movevertical = movevertical * 10;
-                    movespeed = movespeed / 2; //This is so you don't move along walls at full speed
+                    movespeed = movespeed / 2;
                 }
                 break;
             case Constants.LEFT:
@@ -127,6 +123,30 @@ public class Player : MonoBehaviour
                  rb.velocity = new Vector2(Mathf.Lerp(0, movehorizontal * curSpeed, 0.8f),
                                              Mathf.Lerp(0, movevertical * curSpeed, 0.8f));
 
-         
     }
-}
+
+    void OnCollisionStay2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Muro")
+        {
+            Vector3 contactPoint = coll.contacts[0].point;
+            Vector3 center = coll.collider.bounds.center;
+            isTouchingWallLeft = contactPoint.x > center.x;
+            isTouchingWallRight = contactPoint.x < center.x;
+            isTouchingWallUp = contactPoint.y < center.y;
+            isTouchingWallDown = contactPoint.y > center.y;
+        }
+    }
+
+    //OnCollisionExit2D is used to reset the isTouchingWall variables once you leave contact with a wall
+    void OnCollisionExit2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Muro")
+        {
+            isTouchingWallLeft = false;
+            isTouchingWallRight = false;
+            isTouchingWallUp = false;
+            isTouchingWallDown = false;
+        }
+    }
+    }

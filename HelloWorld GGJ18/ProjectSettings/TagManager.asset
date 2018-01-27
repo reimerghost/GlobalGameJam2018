@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Camaras/Camara2
   - Camaras/Camara1
+  - Player1
+  - Player2
+  - Muro
   layers:
   - Default
   - TransparentFX

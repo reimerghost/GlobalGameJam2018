@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 114879086775027328}
   - component: {fileID: 50797680421918212}
   - component: {fileID: 58966955943187432}
+  - component: {fileID: 114017850055801882}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1396164479087112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.29, y: 1.06, z: 0}
+  m_LocalPosition: {x: -10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,7 +63,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &58966955943187432
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -78,6 +79,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
+--- !u!114 &114017850055801882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1396164479087112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d92d971ede4a8141a5c8d515e41101d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingDirection: 0
 --- !u!114 &114879086775027328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,7 +102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e39d6a5ebef5554a951ecb89dcfb3c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 2
+  isTouchingWallRight: 0
+  isTouchingWallLeft: 0
+  isTouchingWallUp: 0
+  isTouchingWallDown: 0
 --- !u!212 &212044588220875654
 SpriteRenderer:
   m_ObjectHideFlags: 1
