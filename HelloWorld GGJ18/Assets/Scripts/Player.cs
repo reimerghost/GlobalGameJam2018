@@ -55,7 +55,8 @@ public class Player : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal") ;
         float moveVertical = Input.GetAxis("Vertical");
 
-        // use other keys
+        // use other keys 
+        
 		if( Input.GetKey( KeyCode.I ) ){
             Debug.Log( "player move up" );
             moveVertical = 1;
