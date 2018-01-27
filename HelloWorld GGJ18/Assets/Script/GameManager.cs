@@ -6,19 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    /*public float levelStartDelay = 2f;
-    public float turnDelay = 0.1f;*/
+
 	public static GameManager instance = null;
 	public BoardManager boardScript;
-	/*public int playerFoodPoints = 100;
-	[HideInInspector] public bool playerTurn = true;
 
-    private Text levelText;
-    private GameObject levelImage;
-    private bool doingSetup = true;
-	private int level = 1;
-    private List<Enemy> enemies;
-    private bool enemiesMoving;*/
 
 	private void Awake (){
         if (instance == null)
@@ -27,58 +18,18 @@ public class GameManager : MonoBehaviour {
         { Destroy(gameObject); }
 
 		DontDestroyOnLoad (gameObject);
-        enemies = new List<Enemy>();
 		boardScript = GetComponent<BoardManager>();
 		InitGame ();
 	}
 
     private void OnLevelWasLoaded(int index)
     {
-        level++;
         InitGame();
     }
 
-    /*
-        private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
-        {
-            level++;
-            InitGame();
-        }
-
-
-        private void OnEnable()
-        {
-            SceneManager.sceneLoaded += OnLevelFinishedLoading;
-        }
-
-        private void OnDisable()
-        {
-            SceneManager.sceneLoaded -= OnLevelFinishedLoading;
-        }
-    */
     void InitGame(){
-        doingSetup = true;  
-        levelImage = GameObject.Find("levelImage");
-        levelText = GameObject.Find("levelText").GetComponent<Text>();
-        levelText.text = "Day " + level;
-        levelImage.SetActive(true);        
-        Invoke("HideLevelImage", levelStartDelay);
-        enemies.Clear();
-        boardScript.SetupScene(level);
+        /*boardScript.SetupScene(level);*/
     }
-
-    private void HideLevelImage()
-    {
-        levelImage.SetActive(false);
-        doingSetup = false;
-    }
-
-	public void GameOver(){
-        levelText.text = "After " + level + " days, you starved.";
-        levelImage.SetActive(true);
-		enabled = false;
-
-	}
 
 	// Update is called once per frame
 	void Update () {
@@ -88,35 +39,12 @@ public class GameManager : MonoBehaviour {
             Application.Quit();
         }
 
-        if (playerTurn || enemiesMoving || doingSetup)
+        /*if (playerTurn || doingSetup)
         {
             return;
-        }
+        }*/
 
-        StartCoroutine(MoveEnemies());
+
 	}
-
-    public void AddEnemyToList(Enemy script)
-    {
-        enemies.Add(script);
-    }
-
-    IEnumerator MoveEnemies()
-    {
-        enemiesMoving = true;
-        yield return new WaitForSeconds(turnDelay);
-        if (enemies.Count == 0)
-        {
-            yield return new WaitForSeconds(turnDelay);
-        }
-
-        for (int i = 0; i < enemies.Count; i++)
-        {
-            enemies[i].MoveEnemy();
-            yield return new WaitForSeconds(enemies[i].moveTime);
-        }
-
-        playerTurn = true;
-        enemiesMoving = false;
-    }
+    
 }
