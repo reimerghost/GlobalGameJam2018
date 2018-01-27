@@ -48,7 +48,10 @@ public class BoardManager : MonoBehaviour {
         GenerarBaseTablero("Cinco", 5, 20, 5, 5);
         GenerarBaseTablero("Seis", -5, 20, 6, 6);
         IngresoTablero1();
-        
+        GameObject Play = GameObject.Find("Player");
+        Vector3 pos2 = new Vector3(5, 0, 0);
+        Play.transform.position = pos2;
+
     }
 
     void IngresoTablero1()

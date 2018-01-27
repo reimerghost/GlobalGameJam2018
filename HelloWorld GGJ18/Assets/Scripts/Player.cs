@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public bool isTouchingWallLeft;
     public bool isTouchingWallUp;
     public bool isTouchingWallDown;
-    private int initPosY = 5;
+    private int initPosY = 0;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
         Cam1.transform.position = pos;
         GameObject Play = GameObject.Find("Player");
         initPosY = initPosY + 10;
-        Vector3 pos2 = new Vector3(8, initPosY, 0);
+        Vector3 pos2 = new Vector3(5, initPosY, 0);
         Play.transform.position = pos2;
     }
 
