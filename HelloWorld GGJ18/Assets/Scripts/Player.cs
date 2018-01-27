@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
 		if( Input.GetKey( KeyCode.J ) ){
             Debug.Log( " player  move left" );
             moveHorizontal = -1;
-        }*/
+        }
 
         Move(moveHorizontal, moveVertical, curSpeed);
 
