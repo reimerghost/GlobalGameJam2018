@@ -26,6 +26,27 @@ public class RumbleCon : MonoBehaviour {
             vertical = 0;
 
 
+
+		//input keys
+
+//		if( Input.GetKeyDown( KeyCode.Space ) )
+//			Debug.Log( "Space key was pressed." );
+//
+//		if( Input.GetKeyUp( KeyCode.UpArrow ) )
+//			Debug.Log( "Space key was released." );
+//
+//		if( Input.GetKeyRight( KeyCode.UpArrow ) )
+//			Debug.Log( "Space key was released." );
+//
+//		if( Input.GetKeyLeft( KeyCode.DownArrow ) )
+//			Debug.Log( "Space key was released." );
+
+    // if (Input.GetKey ("up"))
+    //     print ("up arrow key is held down");
+
+    // if (Input.GetKey ("down"))
+    //     print ("down arrow key is held down");
+
         
     }
 }
