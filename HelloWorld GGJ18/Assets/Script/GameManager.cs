@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    public float levelStartDelay = 2f;
-    public float turnDelay = 0.1f;
+    /*public float levelStartDelay = 2f;
+    public float turnDelay = 0.1f;*/
 	public static GameManager instance = null;
 	public BoardManager boardScript;
-	public int playerFoodPoints = 100;
+	/*public int playerFoodPoints = 100;
 	[HideInInspector] public bool playerTurn = true;
 
     private Text levelText;
@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
     private bool doingSetup = true;
 	private int level = 1;
     private List<Enemy> enemies;
-    private bool enemiesMoving;
+    private bool enemiesMoving;*/
 
 	private void Awake (){
         if (instance == null)
