@@ -38,22 +38,22 @@ public class RumbleCon : MonoBehaviour {
                 Player2.jump()
         }
 
-		if( Input.GetKeyUp( KeyCode.UpArrow ) ){
+		if( Input.GetKeyUp( KeyCode.I ) ){
             Debug.Log( "player2 move up" );
                 Player2.move_up()
         }
 
-        if( Input.GetKeyDown( KeyCode.DownArrow ) ){
+        if( Input.GetKeyDown( KeyCode.K ) ){
             Debug.Log( "player2 move up" );
                 Player2.move_down()
         }
 
-		if( Input.GetKeyRight( KeyCode.RightArrow ) ){
+		if( Input.GetKeyRight( KeyCode.L ) ){
             Debug.Log( "player2 move right" );
                 Player2.move_right()
         }
 
-		if( Input.GetKeyLeft( KeyCode.LeftArrow ) ){
+		if( Input.GetKeyLeft( KeyCode.J ) ){
             Debug.Log( " player 2 move left" );
                 Player2.move_left()
         }
