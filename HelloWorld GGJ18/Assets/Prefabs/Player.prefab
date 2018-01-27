@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212044588220875654}
   - component: {fileID: 114879086775027328}
   - component: {fileID: 50797680421918212}
-  - component: {fileID: 58966955943187432}
   - component: {fileID: 114017850055801882}
+  - component: {fileID: 61299795423976442}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player1
@@ -64,8 +64,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58966955943187432
-CircleCollider2D:
+--- !u!61 &61299795423976442
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -77,8 +77,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.32
+  m_Size: {x: 0.1, y: 0.1}
+  m_EdgeRadius: 0
 --- !u!114 &114017850055801882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  curSpeed: 0
   isTouchingWallRight: 0
   isTouchingWallLeft: 0
   isTouchingWallUp: 0

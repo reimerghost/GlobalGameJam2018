@@ -14,7 +14,19 @@ public class Player : MonoBehaviour
     public bool isTouchingWallLeft;
     public bool isTouchingWallUp;
     public bool isTouchingWallDown;
+    private int initPosY = 0;
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //Debug.Log("Hello World1");
+        GameObject Cam1 = GameObject.Find("First Camera");
+        Vector3 pos = new Vector3(Cam1.transform.position.x, 10f + Cam1.transform.position.y, -10f);
+        Cam1.transform.position = pos;
+        GameObject Play = GameObject.Find("Player");
+        initPosY = initPosY + 10;
+        Vector3 pos2 = new Vector3(5, initPosY, 0);
+        Play.transform.position = pos2;
+    }
 
     void Start()
     {
@@ -50,7 +62,7 @@ public class Player : MonoBehaviour
 		if( Input.GetKey( KeyCode.J ) ){
             Debug.Log( " player  move left" );
             moveHorizontal = -1;
-        }
+        }*/
 
         Move(moveHorizontal, moveVertical, curSpeed);
 
