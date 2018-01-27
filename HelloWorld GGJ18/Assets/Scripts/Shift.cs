@@ -10,8 +10,8 @@ public class Shift : MonoBehaviour {
 
     private float time = 5.4f;
     private float timeLeft = 5.4f;
-    private GameObject contador;
-    private TextMesh tm;
+    //private GameObject contador;
+    //private TextMesh tm;
 
     private void Start()
     {
@@ -22,10 +22,10 @@ public class Shift : MonoBehaviour {
     void Update()
     {
         timeLeft -= Time.deltaTime;
-        contador = GameObject.Find("Contador");
+        //contador = GameObject.Find("Contador");
 
-        tm = contador.GetComponent<TextMesh>();
-        tm.text = "TIEMPO: "+ Mathf.RoundToInt(timeLeft);
+        //tm = contador.GetComponent<TextMesh>();
+        //tm.text = "TIEMPO: "+ Mathf.RoundToInt(timeLeft);
         if (timeLeft < 0)
         {
             timeLeft = time;

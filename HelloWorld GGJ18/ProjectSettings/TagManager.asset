@@ -6,9 +6,10 @@ TagManager:
   tags:
   - Camaras/Camara2
   - Camaras/Camara1
+  - Exit
   - Player1
-  - Player2
-  - Muro
+  - Exit1
+  - Exit2
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - Block
   - 
   - 
   - 
@@ -43,6 +44,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Player
+    uniqueID: 3079938855
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

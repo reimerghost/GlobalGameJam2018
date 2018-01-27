@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4393873288920940}
   - component: {fileID: 114156722461846214}
-  - component: {fileID: 114838518814718818}
+  - component: {fileID: 114474526085898022}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boardScript: {fileID: 0}
---- !u!114 &114838518814718818
+--- !u!114 &114474526085898022
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -69,6 +69,17 @@ MonoBehaviour:
   floorTiles:
   - {fileID: 1345328083738600, guid: e6df3d4702d44e34c84cd8553375a0dd, type: 2}
   - {fileID: 1397911995462348, guid: cb224bf614edc084baaf227108ac283e, type: 2}
+  - {fileID: 1798914847277558, guid: 6d17ce477d1382a47aabb64c8ec78923, type: 2}
+  - {fileID: 1774698930802364, guid: 5ae4bb1f5442c38449b7fc72bd7b46da, type: 2}
+  - {fileID: 1149278187424914, guid: fdaf905d07ee6fe45b77aa6d9c233e50, type: 2}
+  - {fileID: 1766650459358842, guid: e93a8426095336841afc58227dce4d6d, type: 2}
   outerWallTiles:
   - {fileID: 1468700368402402, guid: 716125c598970794b88be3b05ed31937, type: 2}
   - {fileID: 1882779726409208, guid: b6aca1916a5ce0a47aef38b319383764, type: 2}
+  - {fileID: 1661120043030356, guid: e26433b2d8c3049438995e50c1f93c85, type: 2}
+  - {fileID: 1485274244002664, guid: f196d89024ff74144af20f97646bbee0, type: 2}
+  - {fileID: 1989046397718414, guid: 1cc40e346d8c9974d979d9db55394124, type: 2}
+  - {fileID: 1646292470759936, guid: 3b8b6ff815075894b92fe21e9a1a1ed0, type: 2}
+  salidas:
+  - {fileID: 1043930221121392, guid: ed83694926243d741a97576444dc2f80, type: 2}
+  - {fileID: 1839993172701902, guid: 2176dd2804a534042aa8e3f69f091e78, type: 2}
