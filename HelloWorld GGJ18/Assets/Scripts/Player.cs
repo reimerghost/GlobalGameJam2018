@@ -30,24 +30,24 @@ public class Player : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal") ;
         float moveVertical = Input.GetAxis("Vertical");
-        
 
-		if( Input.GetKeyUp( KeyCode.I ) ){
+        // use other keys
+		if( Input.GetKey( KeyCode.I ) ){
             Debug.Log( "player move up" );
             moveVertical = 1;
         }
 
-        if( Input.GetKeyDown( KeyCode.K ) ){
+        if( Input.GetKey( KeyCode.K ) ){
             Debug.Log( "player move up" );
             moveVertical = -1;
         }
 
-		if( Input.GetKeyRight( KeyCode.L ) ){
+		if( Input.GetKey( KeyCode.L ) ){
             Debug.Log( "player move right" );
             moveHorizontal = 1;
         }
 
-		if( Input.GetKeyLeft( KeyCode.J ) ){
+		if( Input.GetKey( KeyCode.J ) ){
             Debug.Log( " player  move left" );
             moveHorizontal = -1;
         }
