@@ -41,3 +41,5 @@ HelloWorld GGJ18/Temp/
 *.lock
 HelloWorld GGJ18/Library/assetDatabase3
 *.dll
+*.ide-wal
+HelloWorld GGJ18/.vs/HelloWorld GGJ18/v15/Server/sqlite3/storage.ide-wal
