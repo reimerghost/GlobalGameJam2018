@@ -68,3 +68,7 @@ MonoBehaviour:
   rows: 8
   floorTiles:
   - {fileID: 1345328083738600, guid: e6df3d4702d44e34c84cd8553375a0dd, type: 2}
+  - {fileID: 1397911995462348, guid: cb224bf614edc084baaf227108ac283e, type: 2}
+  outerWallTiles:
+  - {fileID: 1468700368402402, guid: 716125c598970794b88be3b05ed31937, type: 2}
+  - {fileID: 1882779726409208, guid: b6aca1916a5ce0a47aef38b319383764, type: 2}
