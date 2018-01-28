@@ -62,7 +62,7 @@ public class BoardManager : MonoBehaviour {
         Vector3 pos2 = new Vector3(7, 3, 0);
         Play1.transform.position = pos2;
         GameObject Play2 = GameObject.Find("Player2");
-        Vector3 pos3 = new Vector3(-7, 3, 0);
+        Vector3 pos3 = new Vector3(-13, 3, 0);
         Play2.transform.position = pos3;
 
     }
