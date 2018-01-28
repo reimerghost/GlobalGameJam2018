@@ -142,7 +142,7 @@ public class BoardManager : MonoBehaviour {
                     for (int iii = 0; iii < elemento.Length; iii++)
                     {
                         String unidad = elemento[iii];
-                        if (unidad.Contains("Muro"))
+                        if (!unidad.Contains("#"))
                         {
                             GenerarMuro(unidad, tablero, temporalx, temporaly);
                         }
