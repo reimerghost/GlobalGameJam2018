@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public bool isTouchingWallLeft;
     public bool isTouchingWallUp;
     public bool isTouchingWallDown;
-    private int initPosY = 0;
+    private float initPosY = 0;
 
     public bool isTouchingPalanca;
 
@@ -23,21 +23,21 @@ public class Player : MonoBehaviour
     {
         if (other.tag == "Exit1")
         { //Debug.Log("Hello World1");
-            GameObject Cam1 = GameObject.Find("First Camera");
-            Vector3 pos = new Vector3(Cam1.transform.position.x, 10f + Cam1.transform.position.y, -10f);
+            GameObject Cam1 = GameObject.Find("Second Camera");
+            Vector3 pos = new Vector3(Cam1.transform.position.x, 12.8f + Cam1.transform.position.y, -10f);
             Cam1.transform.position = pos;
-            GameObject Play = GameObject.Find("Player1");
-            initPosY = initPosY + 10;
-            Vector3 pos2 = new Vector3(5, initPosY, 0);
+            GameObject Play = GameObject.Find("Player2");
+            initPosY = initPosY + 17.5f;
+            Vector3 pos2 = new Vector3(-13, initPosY, 0);
             Play.transform.position = pos2;
         }
         if (other.tag == "Exit2") {
-            GameObject Cam1 = GameObject.Find("Second Camera");
-            Vector3 pos = new Vector3(Cam1.transform.position.x, 10f + Cam1.transform.position.y, -10f);
+            GameObject Cam1 = GameObject.Find("First Camera");
+            Vector3 pos = new Vector3(Cam1.transform.position.x, 12.8f + Cam1.transform.position.y, -10f);
             Cam1.transform.position = pos;
-            GameObject Play = GameObject.Find("Player2");
-            initPosY = initPosY + 10;
-            Vector3 pos2 = new Vector3(-5, initPosY, 0);
+            GameObject Play = GameObject.Find("Player1");
+            initPosY = initPosY + 17.5f;
+            Vector3 pos2 = new Vector3(7, initPosY, 0);
             Play.transform.position = pos2;
         }
         if (other.tag == "Palanca")
