@@ -8,6 +8,8 @@ public class Shift : MonoBehaviour {
 
     private Player jug1, jug2;
 
+    public int turno;
+
     private float time = 5.4f;
     private float timeLeft = 5.4f;
     //private GameObject contador;
@@ -38,11 +40,17 @@ public class Shift : MonoBehaviour {
         jug1.enabled = !jug1.enabled;
         jug2.enabled = !jug2.enabled;
 
-        if(jug1.enabled == false)
-        p1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        if (jug1.enabled == false)
+        {
+            p1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            turno = 1;
+        }
 
-        if(jug2.enabled == false)
+        if (jug2.enabled == false)
+        {
             p2.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            turno = 2;
+        }
 
 
     }

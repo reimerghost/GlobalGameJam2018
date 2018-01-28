@@ -10,7 +10,9 @@ TagManager:
   - Player1
   - Exit1
   - Exit2
-  - Tesorito1
+  - Player2
+  - Palanca
+  - Bloqueo
   layers:
   - Default
   - TransparentFX

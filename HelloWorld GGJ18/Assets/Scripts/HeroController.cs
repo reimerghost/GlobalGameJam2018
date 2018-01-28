@@ -6,12 +6,11 @@ public class HeroController : MonoBehaviour {
 
     public int facingDirection;
 
-	// Use this for initialization
+	
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}

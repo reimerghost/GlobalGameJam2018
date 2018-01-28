@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +9,7 @@ public class Player : MonoBehaviour
 
     private float walkSpeed;
     public float curSpeed;
+    public KeyCode tecla;
 
     public bool isTouchingWallRight;
     public bool isTouchingWallLeft;
@@ -17,8 +17,7 @@ public class Player : MonoBehaviour
     public bool isTouchingWallDown;
     private int initPosY = 0;
 
-    private GameObject mensajex;
-    private GameObject texto;
+    public bool isTouchingPalanca;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -32,7 +31,7 @@ public class Player : MonoBehaviour
             Vector3 pos2 = new Vector3(5, initPosY, 0);
             Play.transform.position = pos2;
         }
-        else if (other.tag == "Exit2") {
+        if (other.tag == "Exit2") {
             GameObject Cam1 = GameObject.Find("Second Camera");
             Vector3 pos = new Vector3(Cam1.transform.position.x, 10f + Cam1.transform.position.y, -10f);
             Cam1.transform.position = pos;
@@ -41,39 +40,52 @@ public class Player : MonoBehaviour
             Vector3 pos2 = new Vector3(-5, initPosY, 0);
             Play.transform.position = pos2;
         }
-        else if (other.tag == "Tesorito1")
+        if (other.tag == "Palanca")
         {
-            texto.GetComponent<Text>().text = "Hola Mundo!!!";
-            mensajex.SetActive(true);
-            GameObject tesoro1 = GameObject.FindWithTag("Tesorito1");
-            //Debug.Log("Ha encontrado una nueva letra@");
-            Destroy(tesoro1,.3f);
-            
+            isTouchingPalanca = true;
         }
-            
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Palanca")
+        {
+            isTouchingPalanca = false;
+        }
     }
 
     void Start()
     {
-        
         rb = GetComponent<Rigidbody2D>();
 
         walkSpeed = (float)4;
         curSpeed = walkSpeed;
-        mensajex = GameObject.Find("MensajeJugador2");
-        texto = GameObject.Find("Text2");
-        mensajex.SetActive(false);
-
+        
     }
+    
+    private
+        float moveHorizontal, moveVertical;
+    private bool action;
 
-    private float hor = 0, ver = 0;
+
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal") ;
-        float moveVertical = Input.GetAxis("Vertical");
+        
+        if (GameObject.Find("GameManager").GetComponent<Shift>().turno < 2)
+        {
+            moveHorizontal = Input.GetAxis("Horizontal");
+            moveVertical = Input.GetAxis("Vertical");            
+        }
+
+        action = Input.GetKeyUp(KeyCode.Joystick1Button0);
+        if (isTouchingPalanca && action)
+        {
+            
+            GameObject.Find("Palanca").GetComponent<Palanca>().PresionarPalanca();
+        }
 
         // use other keys 
-        
+        if (GameObject.Find("GameManager").GetComponent<Shift>().turno == 2) { 
 		if( Input.GetKey( KeyCode.I ) ){
             Debug.Log( "player move up" );
             moveVertical = 1;
@@ -93,7 +105,7 @@ public class Player : MonoBehaviour
             Debug.Log( " player  move left" );
             moveHorizontal = -1;
         }
-
+        }
         Move(moveHorizontal, moveVertical, curSpeed);
 
 
