@@ -53,7 +53,8 @@ public class BoardManager : MonoBehaviour {
         IngresoTablero1();
         IngresoTablero2();*/
 
-        String[] codigoJugador1 = new String[] { "Floor1;Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1", "Floor1;Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1" };
+        String[] codigoJugador1 = MapDefinition.Player1Mapping;
+        String[] codigoJugador2 = MapDefinition.Player2Mapping;
         GeneracionTableroJugador1(codigoJugador1);
         GeneracionTableroJugador2(codigoJugador1);
 
@@ -97,7 +98,7 @@ public class BoardManager : MonoBehaviour {
                     for (int iii = 0; iii < elemento.Length; iii++)
                     {
                         String unidad = elemento[iii];
-                        if (unidad.Contains("Muro"))
+                        if (!unidad.Contains("#"))
                         {
                             GenerarMuro(unidad, tablero, temporalx, temporaly);
                         }

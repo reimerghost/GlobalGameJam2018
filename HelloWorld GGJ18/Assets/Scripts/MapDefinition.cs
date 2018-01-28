@@ -1,16 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
 
-public class MapDefinition : MonoBehaviour {
+public class MapDefinition
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public static readonly String[] Player1Mapping = new String[] { "Floor1;Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1;" +
+               "Muro1,Palanca,#,#,BloqueoA,#,#,Muro1;"+
+               "Muro1,#,#,#,#,#,#,Muro1;"+
+               "Muro1,#,#,#,#,#,#,Muro1;"+
+               "Muro1,#,#,#,#,#,#,Muro1;"+
+               "Muro1,#,#,#,#,Palanca,#,Muro1;"+
+               "Muro1,#,#,#,BloqueoB,#,#,Muro1;"+
+               "Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1"
+        , "Floor1;Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1" };
+    public static readonly String[] Player2Mapping = new String[]
+    { "Floor1;Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1;" +
+               "Muro1,Palanca,#,#,BloqueoA,#,#,Muro1;"+
+               "Muro1,#,#,#,#,#,#,Muro1;"+
+               "Muro1,#,#,#,#,#,#,Muro1;"+
+               "Muro1,#,#,#,#,#,#,Muro1;"+
+               "Muro1,#,#,#,#,Palanca,#,Muro1;"+
+               "Muro1,#,#,#,BloqueoB,#,#,Muro1;"+
+               "Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1"
+        , "Floor1;Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1" };
+
 }

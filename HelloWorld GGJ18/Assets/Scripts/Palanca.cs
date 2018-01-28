@@ -7,6 +7,7 @@ public class Palanca : MonoBehaviour {
     public int numPalanca;
     public bool presionada = false;
     public GameObject[] bloqueos;
+    public Sprite activa, desactiva;
 
     private void Start()
     {
@@ -18,11 +19,11 @@ public class Palanca : MonoBehaviour {
     {
         presionada = !presionada;
         if (presionada) { 
-        GetComponent<SpriteRenderer>().color = Color.white;
+        GetComponent<SpriteRenderer>().sprite = activa;
         }
         else
         {
-        GetComponent<SpriteRenderer>().color = Color.yellow;
+        GetComponent<SpriteRenderer>().sprite = desactiva;
         }
         ReaccionarBloqueos();
     }

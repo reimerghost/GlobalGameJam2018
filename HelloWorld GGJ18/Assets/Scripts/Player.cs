@@ -77,11 +77,10 @@ public class Player : MonoBehaviour
             moveVertical = Input.GetAxis("Vertical");            
         }
 
-        action = Input.GetKeyUp(KeyCode.Joystick1Button0);
+        action = (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.Space));
         if (isTouchingPalanca && action)
-        {
-            
-            GameObject.Find("Palanca").GetComponent<Palanca>().PresionarPalanca();
+        {            
+            GameObject.FindGameObjectWithTag("Palanca").GetComponent<Palanca>().PresionarPalanca();
         }
 
         // use other keys 

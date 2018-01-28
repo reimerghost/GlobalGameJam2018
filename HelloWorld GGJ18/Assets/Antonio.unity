@@ -366,7 +366,7 @@ Prefab:
     - target: {fileID: 114474526085898022, guid: e78e939036194444da0d838adc88a501,
         type: 2}
       propertyPath: muros.Array.size
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 114474526085898022, guid: e78e939036194444da0d838adc88a501,
         type: 2}
@@ -476,6 +476,42 @@ Prefab:
       propertyPath: pisos.Array.data[5]
       value: 
       objectReference: {fileID: 1766650459358842, guid: e93a8426095336841afc58227dce4d6d,
+        type: 2}
+    - target: {fileID: 114474526085898022, guid: e78e939036194444da0d838adc88a501,
+        type: 2}
+      propertyPath: pisos.Array.data[6]
+      value: 
+      objectReference: {fileID: 1829415577465084, guid: fdd8becd8da2ae04fb87aca582d20c48,
+        type: 2}
+    - target: {fileID: 114474526085898022, guid: e78e939036194444da0d838adc88a501,
+        type: 2}
+      propertyPath: pisos.Array.data[7]
+      value: 
+      objectReference: {fileID: 1434694070011050, guid: 1d237aea65f0d024abb236c0973e10b6,
+        type: 2}
+    - target: {fileID: 114474526085898022, guid: e78e939036194444da0d838adc88a501,
+        type: 2}
+      propertyPath: pisos.Array.data[8]
+      value: 
+      objectReference: {fileID: 1633232983732446, guid: 50700b9432e41d34ea11640ae040f2c6,
+        type: 2}
+    - target: {fileID: 114474526085898022, guid: e78e939036194444da0d838adc88a501,
+        type: 2}
+      propertyPath: muros.Array.data[6]
+      value: 
+      objectReference: {fileID: 1829415577465084, guid: fdd8becd8da2ae04fb87aca582d20c48,
+        type: 2}
+    - target: {fileID: 114474526085898022, guid: e78e939036194444da0d838adc88a501,
+        type: 2}
+      propertyPath: muros.Array.data[7]
+      value: 
+      objectReference: {fileID: 1434694070011050, guid: 1d237aea65f0d024abb236c0973e10b6,
+        type: 2}
+    - target: {fileID: 114474526085898022, guid: e78e939036194444da0d838adc88a501,
+        type: 2}
+      propertyPath: muros.Array.data[8]
+      value: 
+      objectReference: {fileID: 1633232983732446, guid: 50700b9432e41d34ea11640ae040f2c6,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e78e939036194444da0d838adc88a501, type: 2}
