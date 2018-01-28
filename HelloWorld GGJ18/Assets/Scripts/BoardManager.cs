@@ -56,7 +56,7 @@ public class BoardManager : MonoBehaviour {
         String[] codigoJugador1 = MapDefinition.Player1Mapping;
         String[] codigoJugador2 = MapDefinition.Player2Mapping;
         GeneracionTableroJugador1(codigoJugador1);
-        GeneracionTableroJugador2(codigoJugador1);
+        GeneracionTableroJugador2(codigoJugador2);
 
 
         GameObject Play1 = GameObject.Find("Player1");

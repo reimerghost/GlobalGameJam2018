@@ -70,19 +70,15 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        
-        if (GameObject.Find("GameManager").GetComponent<Shift>().turno < 2)
-        {
             moveHorizontal = Input.GetAxis("Horizontal");
-            moveVertical = Input.GetAxis("Vertical");            
-        }
+            moveVertical = Input.GetAxis("Vertical"); 
 
         action = (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.Space));
         if (isTouchingPalanca && action)
         {            
             GameObject.FindGameObjectWithTag("Palanca").GetComponent<Palanca>().PresionarPalanca();
         }
-
+        /*
         // use other keys 
         if (GameObject.Find("GameManager").GetComponent<Shift>().turno == 2) { 
 		if( Input.GetKey( KeyCode.I ) ){
@@ -104,7 +100,7 @@ public class Player : MonoBehaviour
             Debug.Log( " player  move left" );
             moveHorizontal = -1;
         }
-        }
+        }*/
         Move(moveHorizontal, moveVertical, curSpeed);
 
 
