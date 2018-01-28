@@ -9,7 +9,7 @@ public class MapDefinition
                "Muro1,Muro1,BloqueoA,Muro1,#####,BloqueoA,#####,Muro1;"+
                "Muro1,Muro1,########,Muro1,#####,BloqueoA,#####,Muro1;"+
                "Muro1,Muro1,########,Muro1,#####,Muro1,########,Muro1;"+
-               "Muro1,Muro1,BloqueoA,#####,BloqueoB,Muro1,Exit1,Muro1;"+
+               "Muro1,Muro1,BloqueoA,#####,BloqueoB,Muro1,Exit2,Muro1;"+
                "Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1"
         , "Floor2;Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1;" +
                "Muro1,Palanca,#,#,BloqueoA,#,#,Muro1;"+
@@ -35,7 +35,7 @@ public class MapDefinition
                "Muro1,Muro1,BloqueoA,Muro1,#####,BloqueoA,#####,Muro1;"+
                "Muro1,Muro1,########,Muro1,#####,BloqueoA,#####,Muro1;"+
                "Muro1,Muro1,########,Muro1,#####,Muro1,########,Muro1;"+
-               "Muro1,Muro1,BloqueoA,#####,BloqueoB,Muro1,Exit2,Muro1;"+
+               "Muro1,Muro1,BloqueoA,#####,BloqueoB,Muro1,Exit1,Muro1;"+
                "Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1"
         ,  "Floor5;Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1;" +
                "Muro1,Palanca,#,#,BloqueoA,#,#,Muro1;"+
