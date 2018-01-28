@@ -55,13 +55,14 @@ public class BoardManager : MonoBehaviour {
 
         String[] codigoJugador1 = new String[] { "Floor1;Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1", "Floor1;Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1,Muro1" };
         GeneracionTableroJugador1(codigoJugador1);
+        GeneracionTableroJugador2(codigoJugador1);
 
 
         GameObject Play1 = GameObject.Find("Player1");
         Vector3 pos2 = new Vector3(7, 3, 0);
         Play1.transform.position = pos2;
         GameObject Play2 = GameObject.Find("Player2");
-        Vector3 pos3 = new Vector3(-7, 3, 0);
+        Vector3 pos3 = new Vector3(-13, 3, 0);
         Play2.transform.position = pos3;
 
     }
@@ -71,6 +72,50 @@ public class BoardManager : MonoBehaviour {
         //Pos en X + 5;
         float x = 5;
         float y = 0;
+        //int contadorCol = 0;
+        //int contadorFil = 0;
+        for (int i = 0; i < niveles.Length; i++)
+        {
+            //pos dentro de tablero, dentro de nivel
+            float temporaly = y;
+
+            Transform tablero = new GameObject("Tablero" + i.ToString()).transform;
+            String cadena = niveles[i];
+            String[] comandos = cadena.Split(';');
+            for (int ii = 0; ii < comandos.Length; ii++)
+            {
+                String nombreElemento = comandos[ii];
+                if (ii == 0)    //es piso
+                {
+                    GenerarPiso(nombreElemento, tablero, x, y);     //Empieza en 5
+                    continue;
+                }
+                else
+                {
+                    float temporalx = x;
+                    String[] elemento = nombreElemento.Split(',');
+                    for (int iii = 0; iii < elemento.Length; iii++)
+                    {
+                        String unidad = elemento[iii];
+                        if (unidad.Contains("Muro"))
+                        {
+                            GenerarMuro(unidad, tablero, temporalx, temporaly);
+                        }
+                        temporalx = temporalx + 1.28f;
+                    }
+                }
+                temporaly = temporaly + 1.28f;
+            }
+            y = y + 12.8f;
+        }
+
+    }
+
+    void GeneracionTableroJugador2(String[] niveles)
+    {
+        //Pos en X + 5;
+        float x = -17.8f;
+        float y = 0f;
         //int contadorCol = 0;
         //int contadorFil = 0;
         for (int i = 0; i < niveles.Length; i++)
