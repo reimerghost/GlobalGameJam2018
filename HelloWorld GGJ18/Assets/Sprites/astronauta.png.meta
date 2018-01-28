@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 94ecf507751842547acd5756dce2b3db
-timeCreated: 1517163810
+guid: 8b012cbfaa53b3e459e932c9639a4b47
+timeCreated: 1517172723
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Astronauta Incompleto_0
-    21300002: Astronauta Incompleto_1
-    21300004: Astronauta Incompleto_2
-    21300006: Astronauta Incompleto_3
-    21300008: Astronauta Incompleto_4
-    21300010: Astronauta Incompleto_5
-    21300012: Astronauta Incompleto_6
-    21300014: Astronauta Incompleto_7
-    21300016: Astronauta Incompleto_8
-    21300018: Astronauta Incompleto_9
-    21300020: Astronauta Incompleto_10
-    21300022: Astronauta Incompleto_11
-    21300024: Astronauta Incompleto_12
-    21300026: Astronauta Incompleto_13
-    21300028: Astronauta Incompleto_14
-    21300030: Astronauta Incompleto_15
+    21300000: astronauta_0
+    21300002: astronauta_1
+    21300004: astronauta_2
+    21300006: astronauta_3
+    21300008: astronauta_4
+    21300010: astronauta_5
+    21300012: astronauta_6
+    21300014: astronauta_7
+    21300016: astronauta_8
+    21300018: astronauta_9
+    21300020: astronauta_10
+    21300022: astronauta_11
+    21300024: astronauta_12
+    21300026: astronauta_13
+    21300028: astronauta_14
+    21300030: astronauta_15
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -106,11 +106,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Astronauta Incompleto_0
+      name: astronauta_0
       rect:
         serializedVersion: 2
         x: 8
-        y: 261
+        y: 264
         width: 33
         height: 74
       alignment: 0
@@ -120,11 +120,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Astronauta Incompleto_1
+      name: astronauta_1
       rect:
         serializedVersion: 2
         x: 61
-        y: 260
+        y: 263
         width: 30
         height: 74
       alignment: 0
@@ -134,11 +134,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Astronauta Incompleto_2
+      name: astronauta_2
       rect:
         serializedVersion: 2
         x: 110
-        y: 260
+        y: 263
         width: 33
         height: 75
       alignment: 0
@@ -148,11 +148,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Astronauta Incompleto_3
+      name: astronauta_3
       rect:
         serializedVersion: 2
         x: 160
-        y: 260
+        y: 263
         width: 30
         height: 74
       alignment: 0
@@ -162,11 +162,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Astronauta Incompleto_4
+      name: astronauta_4
       rect:
         serializedVersion: 2
         x: 13
-        y: 172
+        y: 175
         width: 24
         height: 78
       alignment: 0
@@ -176,11 +176,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Astronauta Incompleto_5
+      name: astronauta_5
       rect:
         serializedVersion: 2
         x: 53
-        y: 173
+        y: 176
         width: 42
         height: 76
       alignment: 0
@@ -190,11 +190,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Astronauta Incompleto_6
+      name: astronauta_6
       rect:
         serializedVersion: 2
         x: 114
-        y: 172
+        y: 175
         width: 24
         height: 78
       alignment: 0
@@ -204,11 +204,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Astronauta Incompleto_7
+      name: astronauta_7
       rect:
         serializedVersion: 2
         x: 152
-        y: 172
+        y: 175
         width: 47
         height: 77
       alignment: 0
@@ -218,11 +218,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Astronauta Incompleto_8
+      name: astronauta_8
       rect:
         serializedVersion: 2
         x: 12
-        y: 87
+        y: 90
         width: 24
         height: 78
       alignment: 0
@@ -232,11 +232,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Astronauta Incompleto_9
+      name: astronauta_9
       rect:
         serializedVersion: 2
         x: 54
-        y: 88
+        y: 91
         width: 42
         height: 76
       alignment: 0
@@ -246,11 +246,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Astronauta Incompleto_10
+      name: astronauta_10
       rect:
         serializedVersion: 2
         x: 112
-        y: 87
+        y: 90
         width: 24
         height: 78
       alignment: 0
@@ -260,11 +260,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Astronauta Incompleto_11
+      name: astronauta_11
       rect:
         serializedVersion: 2
         x: 152
-        y: 87
+        y: 90
         width: 47
         height: 77
       alignment: 0
@@ -274,11 +274,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Astronauta Incompleto_12
+      name: astronauta_12
       rect:
         serializedVersion: 2
         x: 8
-        y: 2
+        y: 5
         width: 35
         height: 76
       alignment: 0
@@ -288,11 +288,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Astronauta Incompleto_13
+      name: astronauta_13
       rect:
         serializedVersion: 2
         x: 59
-        y: 1
+        y: 4
         width: 32
         height: 76
       alignment: 0
@@ -302,11 +302,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Astronauta Incompleto_14
+      name: astronauta_14
       rect:
         serializedVersion: 2
         x: 108
-        y: 2
+        y: 5
         width: 35
         height: 76
       alignment: 0
@@ -316,11 +316,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Astronauta Incompleto_15
+      name: astronauta_15
       rect:
         serializedVersion: 2
         x: 160
-        y: 1
+        y: 4
         width: 32
         height: 76
       alignment: 0
