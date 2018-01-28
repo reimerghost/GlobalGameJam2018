@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class Player : MonoBehaviour
     public bool isTouchingWallDown;
     private int initPosY = 0;
 
+    private GameObject mensajex;
+    private GameObject texto;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Exit1")
@@ -28,7 +32,7 @@ public class Player : MonoBehaviour
             Vector3 pos2 = new Vector3(5, initPosY, 0);
             Play.transform.position = pos2;
         }
-        if (other.tag == "Exit2") {
+        else if (other.tag == "Exit2") {
             GameObject Cam1 = GameObject.Find("Second Camera");
             Vector3 pos = new Vector3(Cam1.transform.position.x, 10f + Cam1.transform.position.y, -10f);
             Cam1.transform.position = pos;
@@ -37,15 +41,28 @@ public class Player : MonoBehaviour
             Vector3 pos2 = new Vector3(-5, initPosY, 0);
             Play.transform.position = pos2;
         }
+        else if (other.tag == "Tesorito1")
+        {
+            texto.GetComponent<Text>().text = "Hola Mundo!!!";
+            mensajex.SetActive(true);
+            GameObject tesoro1 = GameObject.FindWithTag("Tesorito1");
+            //Debug.Log("Ha encontrado una nueva letra@");
+            Destroy(tesoro1,.3f);
+            
+        }
             
     }
 
     void Start()
     {
+        
         rb = GetComponent<Rigidbody2D>();
 
         walkSpeed = (float)4;
         curSpeed = walkSpeed;
+        mensajex = GameObject.Find("MensajeJugador2");
+        texto = GameObject.Find("Text2");
+        mensajex.SetActive(false);
 
     }
 

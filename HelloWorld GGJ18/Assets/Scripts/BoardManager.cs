@@ -2,6 +2,7 @@
 using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEditor;
 
 public class BoardManager : MonoBehaviour {
 	[Serializable]
@@ -26,6 +27,7 @@ public class BoardManager : MonoBehaviour {
 	public GameObject[] enemyTiles;*/
 	public GameObject[] outerWallTiles;
     public GameObject[] salidas;
+    public GameObject Tesorito;
 
 
     //private Transform boardHolder;
@@ -50,13 +52,14 @@ public class BoardManager : MonoBehaviour {
         IngresoTablero1();
         IngresoTablero2();
 
-
         GameObject Play1 = GameObject.Find("Player1");
         Vector3 pos2 = new Vector3(5, 0, 0);
         Play1.transform.position = pos2;
         GameObject Play2 = GameObject.Find("Player2");
         Vector3 pos3 = new Vector3(-5, 0, 0);
         Play2.transform.position = pos3;
+
+        
 
     }
 
@@ -65,11 +68,28 @@ public class BoardManager : MonoBehaviour {
         Transform boardHolder = GameObject.Find("Uno").transform;
         GameObject instance = Instantiate(salidas[0], new Vector3(10, 5, 0f), Quaternion.identity) as GameObject;
         instance.transform.SetParent(boardHolder);
+        GameObject tesorito = Instantiate(Tesorito, new Vector3(8, 3 , 0f), Quaternion.identity) as GameObject;
+        tesorito.transform.tag = "Tesorito1";
+        tesorito.transform.SetParent(boardHolder);
     }
 
     void IngresoTablero2()
     {
         Transform boardHolder = GameObject.Find("Dos").transform;
+        GameObject instance = Instantiate(salidas[1], new Vector3(-10, 5, 0f), Quaternion.identity) as GameObject;
+        instance.transform.SetParent(boardHolder);
+    }
+
+    void IngresoTablero3()
+    {
+        Transform boardHolder = GameObject.Find("Tres").transform;
+        GameObject instance = Instantiate(salidas[0], new Vector3(10, 5, 0f), Quaternion.identity) as GameObject;
+        instance.transform.SetParent(boardHolder);
+    }
+
+    void IngresoTablero4()
+    {
+        Transform boardHolder = GameObject.Find("Cuatro").transform;
         GameObject instance = Instantiate(salidas[1], new Vector3(-10, 5, 0f), Quaternion.identity) as GameObject;
         instance.transform.SetParent(boardHolder);
     }

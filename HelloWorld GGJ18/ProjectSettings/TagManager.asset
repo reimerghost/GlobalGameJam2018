@@ -10,6 +10,7 @@ TagManager:
   - Player1
   - Exit1
   - Exit2
+  - Tesorito1
   layers:
   - Default
   - TransparentFX
