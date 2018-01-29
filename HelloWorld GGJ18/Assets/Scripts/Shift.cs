@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shift : MonoBehaviour {
 
@@ -10,15 +11,16 @@ public class Shift : MonoBehaviour {
 
     public int turno;
 
-    private float time = 5.4f;
-    private float timeLeft = 5.4f;
+    private float time = 4.4f;
+    private float timeLeft = 4.4f;
     //private GameObject contador;
-    //private TextMesh tm;
+    public Text m_MyText;
 
     private void Start()
     {
         jug1 = p1.GetComponent<Player>();
         jug2 = p2.GetComponent<Player>();
+        m_MyText.text = "Tiempo: #";
     }
 
     void Update()
@@ -28,6 +30,7 @@ public class Shift : MonoBehaviour {
 
         //tm = contador.GetComponent<TextMesh>();
         //tm.text = "TIEMPO: "+ Mathf.RoundToInt(timeLeft);
+        m_MyText.text = "TIEMPO: " + Mathf.RoundToInt(timeLeft);
         if (timeLeft < 0)
         {
             timeLeft = time;

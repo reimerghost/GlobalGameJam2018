@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class niveles : MonoBehaviour {
 
 
-    public void Start()
+    public void Update()
     {
-        SceneManager.LoadScene("Game", LoadSceneMode.Single);
+        if (Input.GetKey(KeyCode.Space)) {
+            Application.LoadLevel("Game");
+        }
     }
 }
